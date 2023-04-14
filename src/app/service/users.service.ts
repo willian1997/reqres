@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Data } from '../models/Data.model';
-
+import { Support } from '../models/support.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +10,7 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
-  create(data: Data){
+  create(data: Data , support: Support){
     return this.http.post(this.url, Data);
   }
 
@@ -29,9 +29,4 @@ export class UsersService {
   delete(id: number){
     return this.http.delete(`${this.url}/${id}`);
   }
-
-  login(){}
-
-  loggout(){}
-
 }
