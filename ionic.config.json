@@ -1,0 +1,7 @@
+{
+  "name": "reqres",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
